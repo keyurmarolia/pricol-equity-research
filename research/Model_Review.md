@@ -1,54 +1,28 @@
-# Model review
+# Model methodology
 
-Reviewed 19 September 2026. Scope: consolidated FY2022–FY2026 history, FY2027–FY2031 forecast, DCF and reverse DCF.
+Five operating driver groups contain nine inputs per case. One selector feeds the same schedules, statements and valuation. Historical financial-statement data are unchanged.
 
-## Corrections
+## Accounting and cash flow
 
-| Area | Correction |
-| --- | --- |
-| Historical cash flow | Replaced standalone figures with consolidated figures. Removed the unsupported FX balancing adjustment. |
-| Restated earnings | Used later comparatives, including FY2022 PAT of INR 51.0937 crore and FY2024 tax of INR 45.2931 crore. |
-| Exceptional income | Kept FY2023 exceptional income separate from recurring operating EBITDA. |
-| Balance-sheet mapping | Corrected goodwill, intangibles, other assets, liabilities and FY2025 supplier-finance reclassification. Removed negative balancing amounts. |
-| Forecast interest | Applied interest rates to opening borrowings and lease liabilities, not revenue. |
-| Fixed assets and equity | Linked PPE/CWIP commissioning, depreciation and amortisation. Retained earnings deduct actual forecast dividends. |
-| Funding | Added explicit cash-shortfall borrowing and surplus debt repayment, without circular formulas. |
-| DCF | Applied one WACC to annual cash flows and terminal value. Included terminal reinvestment and retained operating cash. |
-| Reverse DCF | Solved the margin uplift required to reproduce reference enterprise value. |
-| Price and dates | Removed the unsupported quote date. Screener price is an undated reference input. |
-| Operating cash reserve | Included annual increases in required operating cash in FCFF. The opening reserve remains excluded from excess cash. |
-| Cash-flow classification | Classified forecast finance costs as financing cash flow and interest receipts as investing cash flow, consistent with historical reporting. Closing cash and profit are unchanged. |
-| Reverse DCF working capital | Included the effect of changing margins on inventory and payables. Validated against the same three-statement model with unequal inventory and payable days. |
-| Presentation | Removed floating-point negative-zero differences. Reference-price and discount-factor formats retain appropriate precision. |
+Plastics revenue starts from FY2026 revenue less the exited foaming business. Net working capital is inventory plus receivables less payables, expressed as a proportion of revenue; its component mix follows FY2026.
 
-## Verification
+Capex rolls through PPE and work in progress. Depreciation uses opening PPE and half-year commissioned additions. Intangible amortisation and the annual-report treatment of legacy scheme goodwill remain distinct from acquired goodwill. Leases roll forward separately. Interest uses opening balances; borrowing draws and surplus repayments occur at year-end.
 
-- Compared 11 metrics across five years with Screener: revenue, PBT, tax, PAT, depreciation, finance costs, CFO, CFI, CFF, receivables and inventory. All 55 comparisons agree within INR 0.011 crore.
-- Reconciled historical asset and liability components to audited totals, historical profit to reported profit, and cash flows to closing cash.
-- Explained Screener asset-total differences through deferred-tax netting. Debt including leases and cash including other bank balances reconcile within source rounding.
-- All five forecast balance sheets balance. Cash-flow closing cash equals balance-sheet cash. Minimum cash and non-negative debt constraints hold.
-- Independently recomputed DCF discounting and confirmed reverse DCF reproduces reference enterprise value.
-- Tested a higher terminal-year margin, INR 250 crore of additional first-year capex, and unequal inventory/payable days. Applying the reverse-implied margins to the full model reproduces reference enterprise value. Valuation and funding respond, balance sheets remain balanced, and history stays unchanged. Restored the base case afterward.
-- Recalculated and scanned with the spreadsheet calculation engine; no unexpected formula errors were found. Native Microsoft Excel recalculation was not independently tested.
+Operating EBITDA excludes other income and OCI. It is an analytical measure, not a statutory subtotal. NOPAT and FCFF are defined valuation measures. No adjusted PAT, bespoke scoring, DuPont attribution or pro forma historical return series is retained.
 
-## Reported EBITDA reconciliation
+Interest paid is financing cash flow and interest received is investing cash flow. FCFF is before financing, deducts new lease assets as investment and includes additional operating cash. Borrowings and leases are deducted in the enterprise-to-equity bridge; excess cash and non-operating investments are added separately.
 
-| INR crore | FY2025 | FY2026 |
-| --- | ---: | ---: |
-| Operating EBITDA | 312.89 | 469.37 |
-| Other income | 16.64 | 11.57 |
-| Pre-tax OCI | 4.58 | 11.97 |
-| Sum | 334.11 | 492.91 |
-| Management-reported EBITDA | 334.11 | 492.91 |
-| Difference | 0.00 | 0.00 |
+## Estimates and benchmarks
 
-Sources: Pricol Annual Report FY2026 and Investor Presentation May2026. The two-year arithmetic bridge reconciles fully. It does not establish an explicit management policy for the EBITDA measure. OCI is separate from operating profit, and is not forecast. The model's operating-margin denominator includes other operating revenue; management's reported margin denominator excludes it.
+Base core growth declines from 12% to 7%, while operating EBITDA margin increases from 11.3% to 11.8%. Plastics grows 15% in FY2027 and 18% thereafter, subject to the disclosed capacity ceiling. The ceiling is not guaranteed revenue. The ₹700 crore capex program is divided across FY2027–FY2028, then capex is 5% of revenue.
 
-## Remaining interpretation limits
+Management commentary is identified alongside controls. The 24x FY2029 P/E comparison comes from Axis’s September 2026 report and uses this model’s EPS. It is an undiscounted forward comparison, not management guidance or the dated DCF value.
 
-- Growth, margins, working-capital days, WACC and terminal ROIC are analytical assumptions, not guaranteed outcomes.
-- Other balance-sheet accounts remain constant, with no new acquisitions, demerger accounting, OCI or deferred-tax movements.
-- Borrowing and surplus repayments occur at year-end. Interest uses opening balances; actual earlier funding could increase interest expense.
-- INR 766.75 is an undated reference price. The resulting 32.7% implied FY2031 margin is a conditional pricing requirement, not a management target or base-case assumption. The linear solve assumes positive EBIT in each year.
+## Limitations
 
-The DCF is INR 159.10 per share after including operating-cash investment. Excluding that investment would overstate value by INR 2.62 per share under the base assumptions.
+- Acquisition changes the historical business perimeter; reported growth is not organic growth.
+- FY2025 CFO is the recast ₹223.43 crore comparative, not the originally reported ₹309.29 crore. No unsupported cause is assigned to the entire difference.
+- Fixed working-capital mix, commissioning, depreciation and flat other balance-sheet accounts are simplifying assumptions. Factoring affects receivables comparability.
+- Valuation uses the 21 September 2026 reference price and FY2026 net claims, not an interim balance sheet. Reverse DCF solves one margin uplift with other drivers fixed.
+
+Saved-file verification preserved 509 historical numeric values and reconciled the three statements in all cases. DCF was independently recalculated and reverse DCF repriced through the full model. Native Microsoft Excel recalculation has not been independently verified.
